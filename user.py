@@ -1,6 +1,3 @@
-from locale import currency
-
-
 class User:
     # contstructor must be called __init__
     def __init__(self, email, name, password, current_job_title):
