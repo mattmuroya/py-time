@@ -1,10 +1,23 @@
-from common.helper import validate_and_execute, user_input_message
+from user import User
+from post import Post
 
-user_input = ""
-while user_input != "exit":
-    user_input = input(user_input_message)
-    # create a set of the individual values in the list entered by the user; duplicates will be combined
-    days_and_units = user_input.split(":")
-    days_and_units_dictionary = {
-        "days": days_and_units[0], "unit": days_and_units[1]}
-    validate_and_execute(days_and_units_dictionary)
+matt = User("matt.muroya@gmail.com", "Matt Muroya",
+            "password", "Software Engineer")
+
+barack = User("barack@obama.com", "Barack Obama",
+              "password", "Former President")
+
+
+matt.get_user_info()
+
+barack.get_user_info()
+
+
+matts_post = Post("ayy barack lmao sup", matt)
+
+baracks_post = Post("my BOI", barack)
+
+
+matts_post.get_post_info()
+
+baracks_post.get_post_info()
